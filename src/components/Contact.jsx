@@ -3,12 +3,18 @@ import React, { useState } from 'react'
 const Contact = () => {
   const [showModal, setShowModal] = useState(false);
   const [phoneNumber, setPhoneNumber] = useState('');
+  const [error, setError] = useState('');
+  const [submittedPhone, setSubmittedPhone] = useState('');
 
   const handleSubmit = () => {
     if (phoneNumber.length >= 10) {
+      setSubmittedPhone(phoneNumber);
       setShowModal(true);
       setPhoneNumber('');
+      setError('');
       setTimeout(() => setShowModal(false), 3000); // Hide modal after 3 seconds
+    } else {
+      setError('Please enter a valid phone number (minimum 10 digits)');
     }
   };
 
@@ -20,7 +26,7 @@ const Contact = () => {
       <p className='primary-text'>Drop Down Your Contact Our Personal Chef will contact You in SHORTLY!</p>
       <div className='contact-form-container'>
         <input 
-          type='number'
+          type='tel'
           placeholder='Your Phone Number'
           value={phoneNumber}
           onChange={(e) => setPhoneNumber(e.target.value)}
@@ -28,12 +34,14 @@ const Contact = () => {
         <button className='secondary-button' onClick={handleSubmit}>Submit</button>
       </div>
 
+      {error && <p className='input-error' style={{color: 'red', marginTop: '8px'}}>{error}</p>}
+
       {showModal && (
         <div className='modal-overlay'>
           <div className='modal-content'>
             <div className='modal-icon'>✓</div>
             <h2>Thank You!</h2>
-            <p>We'll contact you shortly</p>
+            <p>We'll contact you shortly{submittedPhone ? ` at : ${submittedPhone}` : ''}</p>
           </div>
         </div>
       )}

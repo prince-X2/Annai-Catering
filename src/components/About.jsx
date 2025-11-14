@@ -22,7 +22,14 @@ const About = () => {
             </p>
             <div className='about-buttons-container'>
               <button className='secondary-button'>Learn More</button>
-              <button className='watch-video-button'><BsFillPlayCircleFill /> Watch Video</button>
+              <a
+                href="https://drive.google.com/drive/folders/1MwQr02FBVBvhlx09F5us-6xSbK6w45Sf?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                className='watch-video-button'
+              >
+                <BsFillPlayCircleFill /> Pervious Orders
+              </a>
             </div>
       </div>
       
