@@ -13,7 +13,7 @@ const Testimonals = () => {
             </p>
         </div>
         <div className='testimonial-section-bottom'>
-            <p>“The catering was excellent, flavorful dishes and warm service throughout By Master Chef.”</p>
+            <p>The catering was excellent, flavorful dishes and warm service throughout By Master Chef</p>
             <img src= {profile1} alt='Profile' />
             
             <div className='testimonials-stars-container'>

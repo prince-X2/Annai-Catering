@@ -28,7 +28,7 @@ const Work = () => {
     <div className='work-section-top'>
         <p className='primary-subheading'>Work</p>
         <h1 className='primary-header'>How It Works</h1>
-        <p className='primary-text'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci, natus.</p>
+        <p className='primary-text'>We streamline each step to ensure smooth, reliable, and satisfying catering service</p>
 
     </div>
     <div className='work-section-bottom'>

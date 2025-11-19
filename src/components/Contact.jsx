@@ -12,7 +12,7 @@ const Contact = () => {
       setShowModal(true);
       setPhoneNumber('');
       setError('');
-      setTimeout(() => setShowModal(false), 3000); // Hide modal after 3 seconds
+      setTimeout(() => setShowModal(false), 3000);
     } else {
       setError('Please enter a valid phone number (minimum 10 digits)');
     }
@@ -31,7 +31,9 @@ const Contact = () => {
           value={phoneNumber}
           onChange={(e) => setPhoneNumber(e.target.value)}
         />
-        <button className='secondary-button' onClick={handleSubmit}>Submit</button>
+        <button className='secondary-button' onClick={handleSubmit}>
+          Submit
+        </button>
       </div>
 
       {error && <p className='input-error' style={{color: 'red', marginTop: '8px'}}>{error}</p>}
@@ -41,7 +43,7 @@ const Contact = () => {
           <div className='modal-content'>
             <div className='modal-icon'>✓</div>
             <h2>Thank You!</h2>
-            <p>We'll contact you shortly{submittedPhone ? ` at : ${submittedPhone}` : ''}</p>
+            <p>We will contact you shortly!</p>
           </div>
         </div>
       )}

@@ -11,9 +11,9 @@ const Footer = () => {
                 <h1 className='primary-header'>Annai Catering Services</h1>
             </div>
             <div className='footer-icons'>
-                <BsTwitter />
-                <BsYoutube />
-                <FaFacebookF />
+                <BsTwitter href='' />
+                <BsYoutube href='' />
+                <FaFacebookF href='' />
             </div>
         </div>
         <div className='footer-section-two'>
