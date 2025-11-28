@@ -3,12 +3,9 @@ import React, { useState } from 'react'
 const Contact = () => {
   const [showModal, setShowModal] = useState(false);
   const [phoneNumber, setPhoneNumber] = useState('');
-  const [error, setError] = useState('');
-  const [submittedPhone, setSubmittedPhone] = useState('');
 
   const handleSubmit = () => {
     if (phoneNumber.length >= 10) {
-      setSubmittedPhone(phoneNumber);
       setShowModal(true);
       setPhoneNumber('');
       setError('');
@@ -36,7 +33,6 @@ const Contact = () => {
         </button>
       </div>
 
-      {error && <p className='input-error' style={{color: 'red', marginTop: '8px'}}>{error}</p>}
 
       {showModal && (
         <div className='modal-overlay'>
